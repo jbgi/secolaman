@@ -1,4 +1,4 @@
-package secolaman.impl.data.internal;
+package secolaman.impl.data;
 
 import java.util.HashMap;
 import java.util.Iterator;
@@ -8,8 +8,8 @@ import org.apache.commons.math.complex.Complex;
 import secolaman.data.MetaData;
 import secolaman.data.entries.ComplexMetaEntry;
 import secolaman.data.entries.StringMetaEntry;
-import secolaman.impl.data.internal.entries.StdComplexMetaEntry;
-import secolaman.impl.data.internal.entries.StdStringMetaEntry;
+import secolaman.impl.data.entries.StdComplexMetaEntry;
+import secolaman.impl.data.entries.StdStringMetaEntry;
 
 public class StdMetaData implements MetaData {
 
@@ -32,8 +32,18 @@ public class StdMetaData implements MetaData {
 	}
 
 	@Override
+	public Complex getComplex(String key) {
+		return complexEntries.get(key).getVal();
+	}
+
+	@Override
 	public Iterator<ComplexMetaEntry> getComplexEntriesIterator() {
 		return complexEntries.values().iterator();
+	}
+
+	@Override
+	public String getString(String key) {
+		return stringEntries.get(key).getVal();
 	}
 
 	@Override
