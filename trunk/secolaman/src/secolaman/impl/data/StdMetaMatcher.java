@@ -1,4 +1,4 @@
-package secolaman.impl.data.internal;
+package secolaman.impl.data;
 
 import java.util.HashMap;
 import java.util.Iterator;
@@ -9,8 +9,8 @@ import org.apache.commons.math.complex.Complex;
 import secolaman.data.MetaMatcher;
 import secolaman.data.entries.ComplexMatcherEntry;
 import secolaman.data.entries.StringMatcherEntry;
-import secolaman.impl.data.internal.entries.StdComplexMatcherEntry;
-import secolaman.impl.data.internal.entries.StdStringMatcherEntry;
+import secolaman.impl.data.entries.StdComplexMatcherEntry;
+import secolaman.impl.data.entries.StdStringMatcherEntry;
 
 public class StdMetaMatcher implements MetaMatcher {
 
