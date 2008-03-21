@@ -9,15 +9,15 @@ import secolaman.data.entries.StringMetaEntry;
 
 public interface MetaData {
 
-	public void addString(String key, String val);
-
 	public void addComplex(String key, Complex val);
 
-	public Iterator<StringMetaEntry> getStringEntriesIterator();
+	public void addString(String key, String val);
 
 	public Iterator<ComplexMetaEntry> getComplexEntriesIterator();
 
-	public void removeStringEntry(String key);
+	public Iterator<StringMetaEntry> getStringEntriesIterator();
 
 	public void removeComplexEntry(String key);
+
+	public void removeStringEntry(String key);
 }
