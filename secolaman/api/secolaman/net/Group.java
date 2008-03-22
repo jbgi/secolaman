@@ -13,7 +13,7 @@ public interface Group {
 	public void disconnect();
 
 	public Set<Peer> getPeers();
-	
+
 	public Publisher getPublisher();
 
 	public boolean isConnected();
