@@ -1,6 +1,6 @@
 package secolaman.data;
 
-import java.util.Iterator;
+import java.util.Collection;
 
 import org.apache.commons.math.complex.Complex;
 
@@ -15,11 +15,11 @@ public interface MetaMatcher {
 
 	public void addStringMatcher(String key, String val, boolean caseSensitive);
 
-	public Iterator<ComplexMatcherEntry> getComplexMatcherIterator();
+	public Collection<ComplexMatcherEntry> getComplexMatchers();
 
-	public Iterator<StringMatcherEntry> getRegexMatcherIterator();
+	public Collection<StringMatcherEntry> getRegexMatchers();
 
-	public Iterator<StringMatcherEntry> getStringMatcherIterator();
+	public Collection<StringMatcherEntry> getStringMatchers();
 
 	public void removeComplexMatcher(String key);
 

@@ -5,26 +5,19 @@ import java.util.Set;
 import secolaman.data.Ressource;
 import secolaman.net.Group;
 import secolaman.net.GroupInfo;
-import secolaman.net.GroupSubscriber;
 
 public interface Connector {
+	
+	public void addGroupListener(GroupListener listener);
 
-	public Group ConnectTo(GroupInfo groupInfo);
+	public Group createGroup(GroupInfo groupInfo);
 
-	public GroupInfo createGroup();
-
-	public Ressource createRessource();
-
-	public void deleteGroup(String groupName);
-
-	public Set<GroupInfo> getDiscoveredGroups();
+	public void deleteGroup(Group group);
 
 	public Set<Group> getGroups();
 
-	public void register(String groupSubscriberName, GroupSubscriber subscriber);
+	public GroupInfo newGroupInfo();
 	
-	public void setGroupDiscoveringInterval(long discoveringInterval);
-	
-	public void unregister(String groupSubscriberName);
+	public Ressource newRessource();
 
 }
