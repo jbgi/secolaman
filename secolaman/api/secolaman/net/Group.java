@@ -3,6 +3,7 @@ package secolaman.net;
 import java.util.Set;
 
 import secolaman.GroupListener;
+import secolaman.data.Message;
 
 public interface Group {
 
@@ -17,5 +18,10 @@ public interface Group {
 	public Publisher getPublisher();
 
 	public boolean isConnected();
-
+	
+	public Message newMessage();
+	
+	public Subscriber newSubsciber(String name, boolean withRecords);
+	
+	
 }

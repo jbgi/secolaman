@@ -2,29 +2,26 @@ package secolaman.net;
 
 import java.util.Set;
 
+import secolaman.data.Message;
 import secolaman.data.MetaMatcher;
 import secolaman.data.Ressource;
 
 public interface Publisher {
 
-	public void deleteRessource(Ressource ressource, boolean keepMetaData);
-	
-	public void downloadRecord(Ressource ressource, RessourceHandler handler);
-	
+	public void delete(Subscriber subscriber);
+
 	public Set<Ressource> findLocally(MetaMatcher matcher);
 
 	public Set<Ressource> findLocally(MetaMatcher matcher, boolean withRecord);
 	
-	public boolean isRessourceAvailableFromPeer(String ressourceID, String peerID);
+	public Ressource getRessource(String RessourceID);
 	
-	public Set<String> peersHavingRessource(String ressourceID);
+	public Subscriber getSubscriber(String name);
 	
-	public void publish(Ressource ressource);
+	public Set<Subscriber> getSubscribers();
 	
-	public void subscribe(RessourceHandler handler, MetaMatcher matcher, boolean lookLocally);
-
-	public void subscribe(RessourceHandler handler, MetaMatcher matcher, boolean lookLocally, boolean withRecord);
+	public void publish(Message message);
 	
-	public void unsubscribe(RessourceHandler handler);
+	public void register(Subscriber subscriber);
 	
 }

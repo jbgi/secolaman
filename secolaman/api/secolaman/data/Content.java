@@ -2,8 +2,8 @@ package secolaman.data;
 
 import java.io.File;
 
-public interface Record {
-
+public interface Content {
+	
 	public byte[] getBytes();
 	
 	public File getFile();
