@@ -1,18 +1,18 @@
 package secolaman.net;
 
+import secolaman.data.Message;
 import secolaman.data.MetaMatcher;
-import secolaman.data.Ressource;
 
 public interface Service {
 
-	public void sendAll(Ressource ressource);
+	public void addHandler(RessourceHandler handler, MetaMatcher matcher);
 
-	public void sendTo(String peerID, Ressource ressource);
+	public void removeHandler(RessourceHandler handler);
 
-	public void setDefaultHandler(RessourceHandler handler);
+	public void sendAll(Message message);
 
-	public void subscribe(RessourceHandler handler, MetaMatcher matcher);
+	public void sendTo(String peerID, Message message);
 
-	public void unsubscribe(RessourceHandler handler);
+	public void setDefaultHandler(MessageHandler handler);
 
 }

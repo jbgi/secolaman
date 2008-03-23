@@ -2,7 +2,6 @@ package secolaman;
 
 import java.util.Set;
 
-import secolaman.data.Ressource;
 import secolaman.net.Group;
 import secolaman.net.GroupInfo;
 
@@ -17,7 +16,5 @@ public interface Connector {
 	public Set<Group> getGroups();
 
 	public GroupInfo newGroupInfo();
-	
-	public Ressource newRessource();
 
 }
