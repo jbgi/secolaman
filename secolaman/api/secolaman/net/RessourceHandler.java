@@ -1,9 +1,9 @@
 package secolaman.net;
 
-import secolaman.data.Ressource;
+import secolaman.data.Resource;
 
 public interface RessourceHandler {
 
-	public void handle(Ressource ressource);
+	public void handle(Resource ressource);
 
 }

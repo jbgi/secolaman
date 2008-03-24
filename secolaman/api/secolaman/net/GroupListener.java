@@ -16,26 +16,10 @@
  * You should have received a copy of the GNU General Public License
  * along with Secolaman.  If not, see <http://www.gnu.org/licenses/>.
  */
-package secolaman;
+package secolaman.net;
 
-import secolaman.net.Connector;
+public interface GroupListener {
 
-/**
- * Secolaman entry point.
- * 
- * @author jbgiraudeau
- */
-public abstract class Secolaman {
-
-	/**
-	 * Return a connector object. Connectors are independent from each others
-	 * 
-	 * @param engine Allowed value are "secolaman" (enhanced, experimental) and
-	 *            "dodwan" (basic, stable)
-	 * @return a Connector implementation.
-	 */
-	public static Connector getNewConnector(String engine) {
-		return null;
-	}
-
+	public void peerEvent(PeerEvent e);
+	
 }
