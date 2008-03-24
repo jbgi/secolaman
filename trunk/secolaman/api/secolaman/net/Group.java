@@ -2,7 +2,6 @@ package secolaman.net;
 
 import java.util.Set;
 
-import secolaman.GroupListener;
 import secolaman.data.Message;
 
 public interface Group {
@@ -23,5 +22,6 @@ public interface Group {
 	
 	public Subscriber newSubsciber(String name, boolean withRecords);
 	
+	public void removeGroupListener(GroupListener listener);
 	
 }

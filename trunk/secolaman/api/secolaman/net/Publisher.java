@@ -4,17 +4,17 @@ import java.util.Set;
 
 import secolaman.data.Message;
 import secolaman.data.MetaMatcher;
-import secolaman.data.Ressource;
+import secolaman.data.Resource;
 
 public interface Publisher {
 
 	public void delete(Subscriber subscriber);
 
-	public Set<Ressource> findLocally(MetaMatcher matcher);
+	public Set<Resource> findLocally(MetaMatcher matcher);
 
-	public Set<Ressource> findLocally(MetaMatcher matcher, boolean withRecord);
+	public Set<Resource> findLocally(MetaMatcher matcher, boolean withRecord);
 	
-	public Ressource getRessource(String RessourceID);
+	public Resource getRessource(String RessourceID);
 	
 	public Subscriber getSubscriber(String name);
 	
